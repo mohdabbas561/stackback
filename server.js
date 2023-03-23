@@ -38,7 +38,7 @@ const User = mongoose.model('User', UserSchema);
 
 
 
-app.post('/api/users', async (req, res) => {
+app.post('https://stackback-0cjk.onrender.com/api/users', async (req, res) => {
 try {
 const user = new User(req.body);
 var transport = nodemailer.createTransport({
@@ -72,7 +72,7 @@ res.sendStatus(500);
 }
 });
 
-app.get('/api/users', async (req, res) => {
+app.get('https://stackback-0cjk.onrender.com/api/users', async (req, res) => {
 try {
 const users = await User.find();
 res.send(users);
